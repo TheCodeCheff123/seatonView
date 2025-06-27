@@ -122,6 +122,11 @@ This project is an Express.js-based API designed to handle backend operations fo
 
 ## Example cURL Commands
 
+### postman documentation link
+```bash
+https://documenter.getpostman.com/view/43346544/2sB2xFe7AB
+```
+
 ### Fetch all items
 ```bash
 curl -X GET http://localhost:3000/api/items

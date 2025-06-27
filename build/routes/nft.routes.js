@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const nft_controller_1 = require("../controllers/nft.controller");
+const router = (0, express_1.Router)();
+router.get('/wallet/:address', nft_controller_1.getWalletNFTs);
+router.get('/collection/:address', nft_controller_1.getCollectionNFTs);
+router.get('/nft/:address', nft_controller_1.getNFTDetail);
+router.get('/collection-meta/:address', nft_controller_1.getCollectionMetadata);
+exports.default = router;

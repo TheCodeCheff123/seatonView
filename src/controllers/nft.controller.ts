@@ -19,6 +19,7 @@ export const getCollectionNFTs = async (req: Request, res: Response) => {
     const data = await tonapi.fetchCollectionNFTs(address);
     res.json(data);
   } catch (err) {
+    console.error('TONAPI Error:', err.response?.data || err.message);
     res.status(500).json({ error: 'Failed to fetch collection NFTs' });
   }
 };
@@ -38,7 +39,7 @@ export const getNFTDetail = async (req: Request, res: Response) => {
 export const getCollectionMetadata = async (req: Request, res: Response) => {
   try {
     const { address } = req.params;
-    const data = await tonapi.fetchCollectionMetadata(address);
+    const data = await tonapi.fetchCollectionMeta(address);
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch collection metadata' });
