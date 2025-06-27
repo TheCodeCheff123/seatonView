@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as tonapi from '../services/tonapi.service';
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getWalletNFTs = async (req: Request, res: Response) => {
   try {
     const { address } = req.params;
@@ -11,6 +12,7 @@ export const getWalletNFTs = async (req: Request, res: Response) => {
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getCollectionNFTs = async (req: Request, res: Response) => {
   try {
     const { address } = req.params;
@@ -21,6 +23,7 @@ export const getCollectionNFTs = async (req: Request, res: Response) => {
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getNFTDetail = async (req: Request, res: Response) => {
   try {
     const { address } = req.params;
@@ -31,6 +34,7 @@ export const getNFTDetail = async (req: Request, res: Response) => {
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getCollectionMetadata = async (req: Request, res: Response) => {
   try {
     const { address } = req.params;
